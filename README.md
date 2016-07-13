@@ -3,5 +3,8 @@ A smart secret santa app to organise groups and easily assign, and manage presen
 
 Orginising and participating in a secret santa can hard and stressful at an already hard a stressful time of the year. This app aims to aid those orginising by providing an easy and platform to run and manage their secret santa. Furthermore it also combats the problem of not knowing what to buy your giftee, the platform will ask users to fill in some simple information to gather a picture of what they want.
 
+
+1) what problem are we trying to solve?
+
 ## User Stories
 As an orginiser within a friendship group
