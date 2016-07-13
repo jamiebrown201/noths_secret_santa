@@ -9,7 +9,9 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.create(group_params)
+    @group = Group.new(group_params)
+    @group.user_id = current_user.id
+    @group.save
     redirect_to '/'
   end
 
