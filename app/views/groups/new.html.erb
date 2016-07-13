@@ -1,5 +1,11 @@
 <%= form_for Group.new do |f| %>
  <%= f.label :name %>
  <%= f.text_field :name %>
+ <%= f.label :How_many_guests? %>
+ <%= f.text_field :no_users %>
+ <%= f.label :How_much_should_we_spend? %>
+ <%= f.text_field :price_limit %>
+ <%= f.label :date %>
+ <%= f.date_field :date %>
  <%= f.submit %>
 <% end %>

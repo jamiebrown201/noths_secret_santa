@@ -3,7 +3,7 @@
   <a href="groups/new">Create a group</a>
   <% if @groups.any? %>
     <% @groups.each do |group| %>
-    <h2> <%= group.name %> </h2>
+    <h2> <%= link_to group.name, group_path(group) %> </h2>
   <% end %>
   <% else %>
     No groups CREAT ONE goddammit
