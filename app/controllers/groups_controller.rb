@@ -10,6 +10,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
+    @group.users << current_user
     @group.user_id = current_user.id
     @group.save
     redirect_to '/'
@@ -18,6 +19,9 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
   end
+
+
+
 
   private
 

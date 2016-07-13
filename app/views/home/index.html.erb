@@ -4,9 +4,12 @@
   <% if @groups.any? %>
     <% @groups.each do |group| %>
     <h2> <%= link_to group.name, group_path(group) %> </h2>
+      <% if group.user_id == current_user.id %>
+        <p> You made this group! </p>
+      <% end %>
   <% end %>
   <% else %>
-    No groups CREAT ONE goddammit
+    No groups CREATE ONE goddammit
   <% end %>
 <% else %>
   <%= link_to "Sign in", new_user_session_path %>
