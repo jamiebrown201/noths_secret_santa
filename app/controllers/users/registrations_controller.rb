@@ -1,9 +1,15 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 # before_action :configure_sign_up_params, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
-
   # GET /resource/sign_up
   def new
+    super
+  end
+
+
+  # POST /resource
+  def create
+    puts "HERE I AM $$$$$$$$$$$$$$$$$$$$$$"
     super
     if params(:group_id)
       add_new_users_to_groups(params(:group_id))
@@ -13,16 +19,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
 
   def add_new_users_to_groups
-    puts "HERE I AM $$$$$$$$$$$$$$$$$$$$$$"
-    byebug
     @group = Group.find(params(:group_id))
     @group.users << current_user
   end
-
-  # POST /resource
-  # def create
-  #   super
-  # end
 
   # GET /resource/edit
   # def edit
