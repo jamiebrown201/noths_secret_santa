@@ -1,24 +1,24 @@
 <!-- <% if user_signed_in? %> -->
   <div class="banner">
-    <h2>161 days to go!</h2>
+    <h2 class="banner">161 days to go!</h2>
   </div>
-  <div class="row">
-  <span class="message">
-    <div class="name">
-      <h3>  </h3>
-    </div>
-    <img class="profile_pic" src="/betty.jpg">
-    <p>Betty likes:</p>
-      <p class="category">Pets</p>
-      <p class="category">Fashion</p>
-      <p class="category">Christmas</p>
-      <!-- <p class="category">Add your own....</p> -->
-  </span>
- <h1>Your Secret Santa is Betty!</h1>
-</div>
+  <div class="name">
+    <h3> Your Secret Santa is Betty! </h3>
+  </div>
+  <img class="profile_pic" src="/betty.jpg">
+  <p>Betty likes:</p>
+  <label for="tag-typer">
+  <div id="tags">
+    <span class="tag"><span class="close">&times;</span>pet-lover</span>
+    <span class="tag"><span class="close">&times;</span>drinks connosseur</span>
+    <span class="tag"><span class="close">&times;</span>style-savvy</span>
+    <span class="tag"><span class="close">&times;</span>foodies</span>
+    <input id="tag-typer" type="text" placeholder="Annything we missed?"/>
 
-    <br>
-  <p class="bottom_banner">Need some inspiration...?</p>
+  </div>
+  </label>
+
+
 
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 <!-- <% else %> -->

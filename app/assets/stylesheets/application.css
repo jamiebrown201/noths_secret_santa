@@ -13,135 +13,21 @@
  *= require_tree .
  *= require_self
  */
- @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
 body  {
   background-image: url(/assets/secret_santa_bg.jpg);
   background-attachment: fixed;
   background-size: 100% 100%;
   margin: 0;
   text-align: center;
-  font-family: 'Lato';
+  font-family: 'Montserrat', sans-serif;
   color: #5A6351
   /*background-repeat: no-repeat;*/
-}
-
-
-* {
-
-  transition: all 400ms ease;
-
-}
-
-
-
-
-
-.row, .column {
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  text-shadow: 0 -1px 1px rgba(0,0,0,0.2),0 1px 2px rgba(255,255,255,0.2);
-
-}
-
-.row:hover h1, .column:hover h1{
-
-  top: -30px;
-
-}
-
-.row {
-  width: 95%;
-  background: #444;
-  height: 95px;
-  position: relative;
-  float: left;
-  margin: 1.5% 2.5% 0 2.5%;
-
-}
-
-.column {
-
-  width: 28.333333%;
-  background: #444;
-  height: 95px;
-  position: relative;
-  float: left;
-  margin: 2.5%;
-
-}
-
-h1 {
-
-  width: 100%;
-  position: absolute;
-  background: #00d8d0;
-  padding: 8px;
-  line-height: 1em;
-  font-size: 2em;
-  display: block;
-  font-weight: 200;
-  text-transform: uppercase;
-  text-align: center;
-  margin-left: -8px;
-	box-shadow: 0 8px 6px -6px rgba(0,0,0,0.4);
-
-}
-
-h1:before, h1:after {
-
-  position: absolute;
-  display: block;
-  width: 12px;
-  height: 12px;
-  content: " ";
-  transform: rotate(-45deg);
-  z-index: -1;
-  bottom: -6px;
-
-}
-
-h1:before {
-
-  left: 3px;
-  background: linear-gradient(135deg, rgba(0,216,208,1) 0%,rgba(0,0,0,1) 100%);
-
-}
-
-h1:after {
-  background: linear-gradient(135deg, rgba(0,0,0,1) 0%,rgba(0,216,208,1) 100%);
-  right: 2px;
-
-}
-
-span {
-
-  display: block;
-  box-sizing: border-box;
-  background: #f1f1f1;
-  width: 90%;
-  top: 22px;
-  color: #444;
-  margin-left: 5%;
-  padding:10px;
-  position: absolute;
-  text-align: center;
-  text-shadow: none;
-	box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-
-}
-
-.row:hover span, .column:hover span{
-
-  top: 39px;
-
 }
 
 .banner {
   background-color: #ff6961;
   color:white;
+  margin: 0px;
 }
 
 .social {
@@ -171,4 +57,383 @@ span {
     height: 45px;
     background-color: green;
     padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+/*cat*/
+
+@import url('http://fonts.googleapis.com/css?family=Lato');
+
+body,html {
+  height:100%;
+}
+
+div, ul , li{
+    display: block; position: relative;
+    margin: 0; padding: 0;
+}
+
+span{ font-family: 'Lato', sans-serif; }
+
+.container{
+  position:absolute;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.container .box{
+  margin: 0 auto;
+  width: 240px; height: 240px;
+  border-radius: 100%;
+  overflow: visible;
+}
+
+.container .box-top {
+  position: absolute;
+  margin: 0 auto;
+  width: 130px; height: 50px;
+  z-index: 9;
+  top: 80px; bottom: 0; left: 0; right:0;
+  -webkit-transition: top 0.75s;
+}
+
+.container .box:hover .box-top {
+  top: -25px;
+  -webkit-animation: topdisplay 3s;
+}
+
+.container .box-top ul{
+  list-style:none;
+  height: 25px;
+  width: 100%;
+}
+
+.container .box-top ul li{
+  background: transparent;
+  border: 5px solid #2E16A1;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.container .box-top ul li.first, li.last{
+  left: 20%;
+  bottom: -10px;
+  height: 15px;
+  width: 15px;
+}
+
+.container .box-top ul li.middle{
+  margin: 0 auto;
+  left:0; right: 0;
+  height: 25px; width: 25px;
+}
+
+.container .box-top ul li.last{
+  left: 60%;
+}
+
+.container .box-top .lid{
+  margin: 0 auto;
+  background: #3C81FF;
+  width: 100%; height: 25px;
+}
+
+.container .box-top .lid span{
+  position: absolute;
+  margin: 0 auto;
+  left: 0; right: 0;
+  background: #3B1BCC;
+  width: 25%; height: 25px;
+}
+
+.container .box-bottom {
+  position: absolute;
+  margin: 0 auto;
+  width: 130px; height: 320px;
+  top: auto; bottom: 0; left: 0; right:0;
+}
+
+.container .box-bottom .base{
+  position: absolute;
+  background: #3777EB;
+  border-radius: 0 0 5% 5%;
+  margin: 0 auto;
+  width: 120px; height: 80px;
+  bottom: 30px; left: 0; right:0;
+  z-index: 4;
+}
+
+.container .box-bottom .base span{
+  position: absolute;
+  margin: 0 auto;
+  left: 0; right: 0;
+  background: #2E16A1;
+  width: 25%; height: 100%;
+}
+
+.box-bottom .cat{
+  position: absolute;
+  margin: 0 auto;
+  left: 0; right: 0;
+  bottom: 50px;
+  background: #222;
+  width: 50%; height: 30%;
+  display:none;
+  -webkit-animation: catdisplay 3s;
+  z-index: 1;
+   -webkit-transition: bottom 1s;
+}
+
+.cat:before{
+   width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #222;
+    top: -15px;
+    left: 0;
+    position: absolute;
+    content: "";
+}
+
+.cat:after{
+   width: 0;
+    height: 0;
+    border-right: 0px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid #222;
+    top: -15px;
+    right: 0;
+    position: absolute;
+    content: "";
+}
+
+.cat .face{
+  position: relative;
+  height: 40px;
+}
+
+.cat .face .eye{
+  position: absolute;
+  height: 20px; width: 20px;
+  background: #FFF;
+  border-radius: 100%;
+  top: 15px;
+}
+
+.cat .face .eye.left{ left: 6px; }
+.cat .face .eye.right{  right: 6px; }
+
+.cat .face .nose{
+  position: absolute;
+  margin: auto;
+  left:0; right: 0;
+  height: 3px; width: 3px;
+  background: #DDD;
+  border-radius: 100%;
+  bottom: 6px;
+}
+
+.cat .face .mouth{
+  position: absolute;
+  margin: auto;
+  left:0; right: 0;
+  height: 10px; width: 10px;
+  border-bottom: 2px solid #FFF;
+  border-radius: 100%;
+  bottom: 0px;
+}
+
+.cat .body{
+  position: relative;
+  height: 55px;
+  overflow: visible;
+}
+
+.cat .body .hand{
+  position: absolute;
+  top: 10px;
+  height: 15px; width: 15px;
+  border-radius: 0 0 45% 45%;
+  background: #333;
+  z-index: 2;
+}
+
+.cat .body .hand.left{ left: 6px;}
+.cat .body .hand.right{ right: 6px;}
+
+.cat .body .rotulo{
+  position: absolute;
+  margin: 0 auto;
+  left: -22px; right: 0;
+  bottom: 10px;
+  height: 34px; width: 110px;
+  background: #EDBA73;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.cat .body .rotulo span{
+  color: #333;
+  text-transform: uppercase;
+  line-height: 2.5em;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* SURPRISE!!!! :) */
+
+.container .box:hover .box-top{
+  display:block;
+}
+
+.container .box:hover .box-bottom .cat{
+  display:block;
+  bottom: 110px;
+  -webkit-transition: bottom 1s;
+}
+
+@-webkit-keyframes catdisplay {
+  from {bottom: 50px;}
+  to {bottom: 110px;}
+}
+
+@-webkit-keyframes topdisplay {
+  from {top: 40px;}
+  to {top: -25px;}
+}
+
+/*tags*/
+
+#title{
+  font:bold 48pt "Trebuchet MS";
+  text-align: center;
+  color: #F95;
+  letter-spacing: -2px;
+}
+#title span{
+  font-weight: normal;
+  color: #BBB;
+}
+
+#tags{
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #CCC inset;
+  padding: 10px;
+  width: 50%;
+  background: #fafafa;
+  margin: auto;
+}
+
+#tag-typer{
+  outline: none;
+  border: none;
+  padding: 6px;
+  margin: 3px;
+  margin-right: -25px;
+  width: 100px;
+  background-color: transparent;
+  font-size: 14px;
+  color: #333;
+}
+
+.tag{
+  display: inline-block;
+  background: #F95;
+  color: #FFF;
+  padding: 5px 10px;
+  margin:2px 2px 2px 20px;
+  font: normal 16px sans-serif;
+  position: relative;
+  cursor: default;
+  box-shadow:1px 1px 0 rgba(0,0,0,.2);
+  -webkit-transform-origin:0% 50%;
+  -webkit-animation: swing 1s;
+  -o-animation: swing 1s;
+  animation: swing 1s ;
+}
+
+.tag:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  background: inherit;
+  height: 10px;
+  border: 10px solid #fafafa;
+  border-right-color: transparent;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius:10px 0 0 10px;
+  border-radius:10px 0 0 10px;
+  left: -20px;
+  top: 0;
+}
+
+.tag:after{
+  content: "";
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #FFF;
+  position: absolute;
+  left: -3px;
+  top: 12px;
+  box-shadow:inset 1px 1px 0 #CCC;
+}
+
+.tag .close{
+  position: absolute;
+  background: inherit;
+  left: -4px;
+  z-index: 3;
+  visibility: hidden;
+}
+
+.tag:hover .close{
+  visibility: visible;
+
+}
+
+.close:hover {
+  color: rgba(0,0,0,.5);
+}
+
+
+.colors {
+  list-style:none;
+}
+.colors li{
+  display: inline-block;
+  width:15px;
+  height: 15px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes swing
+{
+  0%   {-webkit-transform: rotate(100deg)}
+  25%  {-webkit-transform: rotate(-25deg)}
+  50%  {-webkit-transform: rotate(15deg)}
+  100% {-webkit-transform: rotate(0deg)}
+}
+
+
+@keyframes swing
+{
+  0%   {-webkit-transform: rotate(-200)}
+  25%  {-webkit-transform: rotate(-70)}
+  50%  {-webkit-transform: rotate(-185)}
+  100% {-webkit-transform: rotate(-180)}
 }
