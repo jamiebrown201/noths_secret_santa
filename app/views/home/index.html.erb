@@ -1,18 +1,19 @@
 <!-- <% if user_signed_in? %> -->
   <h2>Secret Santa is on December 22nd...only 161 days to go!</h2>
-  <h3> Your Secret Santa is Betty! </h3>
+  <h2> Your Secret Santa is </h3>
   <img class="profile_pic" src="/betty.jpg">
+  <h1> Betty!</h1>
   <p>Betty likes:</p>
     <p class="category">Pets</p>
     <p class="category">Fashion</p>
     <p class="category">Christmas</p>
     <!-- <p class="category">Add your own....</p> -->
     <br>
-  <a href="http://www.notonthehighstreet.com/puptarthandmade/product/red-tartan-christmas-pet-bow-tie">Betty's gift</a>
-  <p class="bottom_banner"> Need some help...?</p>
+  <%= link_to "What we recommend...", groups_path %>
+  <p class="bottom_banner"> Need some inspiration...?</p>
 
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 <!-- <% else %> -->
   <%= link_to "Sign in", new_user_session_path %>
-  <!-- <%= link_to "Sign up", new_user_registration_path %> -->
+  <%= link_to "Sign up", new_user_registration_path %>
 <!-- <% end %>  -->
