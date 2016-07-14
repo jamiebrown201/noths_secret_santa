@@ -20,7 +20,14 @@ body  {
   margin: 0;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  color: #5A6351
   /*background-repeat: no-repeat;*/
+}
+
+.banner {
+  background-color: #ff6961;
+  color:white;
+  margin: 0px;
 }
 
 .social {
@@ -31,8 +38,10 @@ body  {
 }
 
 .profile_pic{
-  width: 125px;
-  height: 125px;
+  max-width:140px;
+  max-height:140px;
+  width: auto;
+  height: auto;
   border-radius: 50%;
 }
 
@@ -50,6 +59,7 @@ body  {
     padding-top: 20px;
 }
 
+
 .present {
   position: fixed;
   top: 50%;
@@ -57,40 +67,372 @@ body  {
   transform: translate(-50%, -50%);
 }
 
-/*body { background-color:#56A5EC; }*/
 
-/*.snow{
-    background: none;
-    font-family: Androgyne;
-    background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
-    height: 100%;
+@import url('http://fonts.googleapis.com/css?family=Lato');
+
+body,html {
+  height:100%;
+}
+
+div, ul , li{
+    display: block; position: relative;
+    margin: 0; padding: 0;
+}
+
+span{ font-family: 'Lato', sans-serif; }
+
+.container{
+  position:absolute;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.container .box{
+  margin: 0 auto;
+  width: 240px; height: 240px;
+  border-radius: 100%;
+  overflow: visible;
+}
+
+.container .box-top {
+  position: absolute;
+  margin: 0 auto;
+  width: 130px; height: 50px;
+  z-index: 9;
+  top: 80px; bottom: 0; left: 0; right:0;
+  -webkit-transition: top 0.75s;
+}
+
+.container .box:hover .box-top {
+  top: -25px;
+  -webkit-animation: topdisplay 3s;
+}
+
+.container .box-top ul{
+  list-style:none;
+  height: 25px;
+  width: 100%;
+}
+
+.container .box-top ul li{
+  background: transparent;
+  border: 5px solid #2E16A1;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.container .box-top ul li.first, li.last{
+  left: 20%;
+  bottom: -10px;
+  height: 15px;
+  width: 15px;
+}
+
+.container .box-top ul li.middle{
+  margin: 0 auto;
+  left:0; right: 0;
+  height: 25px; width: 25px;
+}
+
+.container .box-top ul li.last{
+  left: 60%;
+}
+
+.container .box-top .lid{
+  margin: 0 auto;
+  background: #3C81FF;
+  width: 100%; height: 25px;
+}
+
+.container .box-top .lid span{
+  position: absolute;
+  margin: 0 auto;
+  left: 0; right: 0;
+  background: #3B1BCC;
+  width: 25%; height: 25px;
+}
+
+.container .box-bottom {
+  position: absolute;
+  margin: 0 auto;
+  width: 130px; height: 320px;
+  top: auto; bottom: 0; left: 0; right:0;
+}
+
+.container .box-bottom .base{
+  position: absolute;
+  background: #3777EB;
+  border-radius: 0 0 5% 5%;
+  margin: 0 auto;
+  width: 120px; height: 80px;
+  bottom: 30px; left: 0; right:0;
+  z-index: 4;
+}
+
+.container .box-bottom .base span{
+  position: absolute;
+  margin: 0 auto;
+  left: 0; right: 0;
+  background: #2E16A1;
+  width: 25%; height: 100%;
+}
+
+.box-bottom .cat{
+  position: absolute;
+  margin: 0 auto;
+  left: 0; right: 0;
+  bottom: 50px;
+  background: #222;
+  width: 50%; height: 30%;
+  display:none;
+  -webkit-animation: catdisplay 3s;
+  z-index: 1;
+   -webkit-transition: bottom 1s;
+}
+
+.cat:before{
+   width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #222;
+    top: -15px;
     left: 0;
     position: absolute;
-    top: 0;
-    width: 100%;
-    z-index:1;
-    -webkit-animation: snow 10s linear infinite;
-    -moz-animation: snow 10s linear infinite;
-    -ms-animation: snow 10s linear infinite;
-    animation: snow 10s linear infinite;
+    content: "";
 }
-@keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+
+.cat:after{
+   width: 0;
+    height: 0;
+    border-right: 0px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid #222;
+    top: -15px;
+    right: 0;
+    position: absolute;
+    content: "";
 }
-@-moz-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+
+.cat .face{
+  position: relative;
+  height: 40px;
 }
-@-webkit-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+
+.cat .face .eye{
+  position: absolute;
+  height: 20px; width: 20px;
+  background: #FFF;
+  border-radius: 100%;
+  top: 15px;
 }
-@-ms-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}*/
+
+.cat .face .eye.left{ left: 6px; }
+.cat .face .eye.right{  right: 6px; }
+
+.cat .face .nose{
+  position: absolute;
+  margin: auto;
+  left:0; right: 0;
+  height: 3px; width: 3px;
+  background: #DDD;
+  border-radius: 100%;
+  bottom: 6px;
+}
+
+.cat .face .mouth{
+  position: absolute;
+  margin: auto;
+  left:0; right: 0;
+  height: 10px; width: 10px;
+  border-bottom: 2px solid #FFF;
+  border-radius: 100%;
+  bottom: 0px;
+}
+
+.cat .body{
+  position: relative;
+  height: 55px;
+  overflow: visible;
+}
+
+.cat .body .hand{
+  position: absolute;
+  top: 10px;
+  height: 15px; width: 15px;
+  border-radius: 0 0 45% 45%;
+  background: #333;
+  z-index: 2;
+}
+
+.cat .body .hand.left{ left: 6px;}
+.cat .body .hand.right{ right: 6px;}
+
+.cat .body .rotulo{
+  position: absolute;
+  margin: 0 auto;
+  left: -22px; right: 0;
+  bottom: 10px;
+  height: 34px; width: 110px;
+  background: #EDBA73;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.cat .body .rotulo span{
+  color: #333;
+  text-transform: uppercase;
+  line-height: 2.5em;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* SURPRISE!!!! :) */
+
+.container .box:hover .box-top{
+  display:block;
+}
+
+.container .box:hover .box-bottom .cat{
+  display:block;
+  bottom: 110px;
+  -webkit-transition: bottom 1s;
+}
+
+@-webkit-keyframes catdisplay {
+  from {bottom: 50px;}
+  to {bottom: 110px;}
+}
+
+@-webkit-keyframes topdisplay {
+  from {top: 40px;}
+  to {top: -25px;}
+}
+
+/*tags*/
+
+#title{
+  font:bold 48pt "Trebuchet MS";
+  text-align: center;
+  color: #F95;
+  letter-spacing: -2px;
+}
+#title span{
+  font-weight: normal;
+  color: #BBB;
+}
+
+#tags{
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #CCC inset;
+  padding: 10px;
+  width: 50%;
+  background: #fafafa;
+  margin: auto;
+}
+
+#tag-typer{
+  outline: none;
+  border: none;
+  padding: 6px;
+  margin: 3px;
+  margin-right: -25px;
+  width: 100px;
+  background-color: transparent;
+  font-size: 14px;
+  color: #333;
+}
+
+.tag{
+  display: inline-block;
+  background: #F95;
+  color: #FFF;
+  padding: 5px 10px;
+  margin:2px 2px 2px 20px;
+  font: normal 16px sans-serif;
+  position: relative;
+  cursor: default;
+  box-shadow:1px 1px 0 rgba(0,0,0,.2);
+  -webkit-transform-origin:0% 50%;
+  -webkit-animation: swing 1s;
+  -o-animation: swing 1s;
+  animation: swing 1s ;
+}
+
+.tag:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  background: inherit;
+  height: 10px;
+  border: 10px solid #fafafa;
+  border-right-color: transparent;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius:10px 0 0 10px;
+  border-radius:10px 0 0 10px;
+  left: -20px;
+  top: 0;
+}
+
+.tag:after{
+  content: "";
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #FFF;
+  position: absolute;
+  left: -3px;
+  top: 12px;
+  box-shadow:inset 1px 1px 0 #CCC;
+}
+
+.tag .close{
+  position: absolute;
+  background: inherit;
+  left: -4px;
+  z-index: 3;
+  visibility: hidden;
+}
+
+.tag:hover .close{
+  visibility: visible;
+
+}
+
+.close:hover {
+  color: rgba(0,0,0,.5);
+}
+
+
+.colors {
+  list-style:none;
+}
+.colors li{
+  display: inline-block;
+  width:15px;
+  height: 15px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes swing
+{
+  0%   {-webkit-transform: rotate(100deg)}
+  25%  {-webkit-transform: rotate(-25deg)}
+  50%  {-webkit-transform: rotate(15deg)}
+  100% {-webkit-transform: rotate(0deg)}
+}
+
+
+@keyframes swing
+{
+  0%   {-webkit-transform: rotate(-200)}
+  25%  {-webkit-transform: rotate(-70)}
+  50%  {-webkit-transform: rotate(-185)}
+  100% {-webkit-transform: rotate(-180)}
+}
