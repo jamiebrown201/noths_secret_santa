@@ -1,14 +1,13 @@
 <!-- <% if user_signed_in? %> -->
-  <div class="banner">
+
     <h2 class="banner">161 days to go!</h2>
-  </div>
+  <br>
   <div class="name">
     <h3> Your Secret Santa is</h3>
   <img class="profile_pic" src="/betty.jpg">
     <h1> Betty!</h1>
   </div>
-  <p>About Betty:</p>
-
+  <p>Betty loves:</p>
   <label for="tag-typer">
   <div id="tags">
     <span class="tag"><span class="close">&times;</span>pet-lover</span>
@@ -17,13 +16,13 @@
     <span class="tag"><span class="close">&times;</span>foodies</span>
     <br>
     <input id="tag-typer" type="text" placeholder="Anything else?"/>
-
   </div>
   </label>
 
-  <%= link_to "What we recommend...", groups_path %>
-  <p class="banner"> Need some inspiration...?</p>
-
+  <div class="banner">
+    <span style="width: 50%; text-align: center; margin-right: 30px"><%= link_to "Elves' choice...", groups_path %></span>
+    <span style="width: 50%; text-align: center"> Need some inspiration...?</span>
+  </div>
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 <!-- <% else %> -->
   <%= link_to "Sign in", new_user_session_path %>

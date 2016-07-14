@@ -20,14 +20,88 @@ body  {
   margin: 0;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  color: #5A6351
+  color: white;
   /*background-repeat: no-repeat;*/
 }
 
+.log-in {
+  margin-top: 10%;
+}
+
+.title {
+  font-size: 3em;
+  margin-top: 150px;
+}
+
+.actions input {
+  font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #f7ad30;
+	padding: 13px 13px 13px 13px;
+	margin-bottom: 10px;
+	width:50%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+
+#user_email, #user_password{
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:50%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+  background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+
+#user_email:focus, #user_password:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+#user_password, #user_password:focus {
+  background-image: url(/shhh.png);
+}
+
+.lucky_dip{
+  margin-top: 25px;
+
+}
+.lucky_dip a{
+  text-decoration: none;
+}
+
+.logo {
+  margin-top: 10%;
+  width: 50%;
+  height: 50%;
+}
+
 .banner {
-  background-color: #ff6961;
+  background-color: #f7ad30;;
   color:white;
   margin: 0px;
+  padding: 20px;
 }
 
 .social {
@@ -38,10 +112,8 @@ body  {
 }
 
 .profile_pic{
-  max-width:140px;
-  max-height:140px;
-  width: auto;
-  height: auto;
+  width:250px;
+  height:250px;
   border-radius: 50%;
 }
 
@@ -51,12 +123,6 @@ body  {
   border: solid 1px red;
   padding: 5px;
   padding-right: 35px;
-}
-
-.bottom_banner{
-    height: 45px;
-    background-color: green;
-    padding-top: 20px;
 }
 
 
