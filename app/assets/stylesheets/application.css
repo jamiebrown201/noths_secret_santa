@@ -13,14 +13,135 @@
  *= require_tree .
  *= require_self
  */
+ @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
 body  {
   background-image: url(/assets/secret_santa_bg.jpg);
   background-attachment: fixed;
   background-size: 100% 100%;
   margin: 0;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato';
+  color: #5A6351
   /*background-repeat: no-repeat;*/
+}
+
+
+* {
+
+  transition: all 400ms ease;
+
+}
+
+
+
+
+
+.row, .column {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.2),0 1px 2px rgba(255,255,255,0.2);
+
+}
+
+.row:hover h1, .column:hover h1{
+
+  top: -30px;
+
+}
+
+.row {
+  width: 95%;
+  background: #444;
+  height: 95px;
+  position: relative;
+  float: left;
+  margin: 1.5% 2.5% 0 2.5%;
+
+}
+
+.column {
+
+  width: 28.333333%;
+  background: #444;
+  height: 95px;
+  position: relative;
+  float: left;
+  margin: 2.5%;
+
+}
+
+h1 {
+
+  width: 100%;
+  position: absolute;
+  background: #00d8d0;
+  padding: 8px;
+  line-height: 1em;
+  font-size: 2em;
+  display: block;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: -8px;
+	box-shadow: 0 8px 6px -6px rgba(0,0,0,0.4);
+
+}
+
+h1:before, h1:after {
+
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  transform: rotate(-45deg);
+  z-index: -1;
+  bottom: -6px;
+
+}
+
+h1:before {
+
+  left: 3px;
+  background: linear-gradient(135deg, rgba(0,216,208,1) 0%,rgba(0,0,0,1) 100%);
+
+}
+
+h1:after {
+  background: linear-gradient(135deg, rgba(0,0,0,1) 0%,rgba(0,216,208,1) 100%);
+  right: 2px;
+
+}
+
+span {
+
+  display: block;
+  box-sizing: border-box;
+  background: #f1f1f1;
+  width: 90%;
+  top: 22px;
+  color: #444;
+  margin-left: 5%;
+  padding:10px;
+  position: absolute;
+  text-align: center;
+  text-shadow: none;
+	box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+}
+
+.row:hover span, .column:hover span{
+
+  top: 39px;
+
+}
+
+.banner {
+  background-color: #ff6961;
+  color:white;
 }
 
 .social {
@@ -31,8 +152,10 @@ body  {
 }
 
 .profile_pic{
-  width: 125px;
-  height: 125px;
+  max-width:140px;
+  max-height:140px;
+  width: auto;
+  height: auto;
   border-radius: 50%;
 }
 
@@ -48,42 +171,4 @@ body  {
     height: 45px;
     background-color: green;
     padding-top: 20px;
-}
-
-body { background-color:#56A5EC; }
-
-.snow{
-    background: none;
-    font-family: Androgyne;
-    background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index:1;
-    -webkit-animation: snow 10s linear infinite;
-    -moz-animation: snow 10s linear infinite;
-    -ms-animation: snow 10s linear infinite;
-    animation: snow 10s linear infinite;
-}
-@keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-@-moz-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
-}
-@-webkit-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-@-ms-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 }

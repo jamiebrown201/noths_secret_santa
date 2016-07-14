@@ -1,15 +1,24 @@
 <!-- <% if user_signed_in? %> -->
-  <h2>Secret Santa is on December 22nd...only 161 days to go!</h2>
-  <h3> Your Secret Santa is Betty! </h3>
-  <img class="profile_pic" src="/betty.jpg">
-  <p>Betty likes:</p>
-    <p class="category">Pets</p>
-    <p class="category">Fashion</p>
-    <p class="category">Christmas</p>
-    <!-- <p class="category">Add your own....</p> -->
+  <div class="banner">
+    <h2>161 days to go!</h2>
+  </div>
+  <div class="row">
+  <span class="message">
+    <div class="name">
+      <h3>  </h3>
+    </div>
+    <img class="profile_pic" src="/betty.jpg">
+    <p>Betty likes:</p>
+      <p class="category">Pets</p>
+      <p class="category">Fashion</p>
+      <p class="category">Christmas</p>
+      <!-- <p class="category">Add your own....</p> -->
+  </span>
+ <h1>Your Secret Santa is Betty!</h1>
+</div>
+
     <br>
-  <a href="http://www.notonthehighstreet.com/puptarthandmade/product/red-tartan-christmas-pet-bow-tie">Betty's gift</a>
-  <p class="bottom_banner"> Need some help...?</p>
+  <p class="bottom_banner">Need some inspiration...?</p>
 
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 <!-- <% else %> -->
