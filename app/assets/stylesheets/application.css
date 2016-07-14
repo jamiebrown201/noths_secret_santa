@@ -24,6 +24,11 @@ body  {
   /*background-repeat: no-repeat;*/
 }
 
+.elf a {
+  text-decoration: none;
+  color: white;
+}
+
 .log-in {
   margin-top: 10%;
 }
@@ -399,6 +404,7 @@ span{ font-family: 'Lato', sans-serif; }
   width: 50%;
   background: #fafafa;
   margin: auto;
+  margin-bottom: 8px;
 }
 
 #tag-typer{

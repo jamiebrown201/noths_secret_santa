@@ -10,17 +10,17 @@
   <p>Betty loves:</p>
   <label for="tag-typer">
   <div id="tags">
-    <span class="tag"><span class="close">&times;</span>pet-lover</span>
-    <span class="tag"><span class="close">&times;</span>drinks connosseur</span>
-    <span class="tag"><span class="close">&times;</span>style-savvy</span>
-    <span class="tag"><span class="close">&times;</span>foodies</span>
+    <span class="tag"><span class="close">&times;</span>pets</span>
+    <span class="tag"><span class="close">&times;</span>wine</span>
+    <span class="tag"><span class="close">&times;</span>neck wear</span>
+    <span class="tag"><span class="close">&times;</span>food</span>
     <br>
     <input id="tag-typer" type="text" placeholder="Anything else?"/>
   </div>
   </label>
 
   <div class="banner">
-    <span style="width: 50%; text-align: center; margin-right: 30px"><%= link_to "Elves' choice...", groups_path %></span>
+    <span style="width: 50%; text-align: center; margin-right: 30px" class="elf"><%= link_to "Elves' choice...", groups_path %></span>
     <span style="width: 50%; text-align: center"> Need some inspiration...?</span>
   </div>
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
